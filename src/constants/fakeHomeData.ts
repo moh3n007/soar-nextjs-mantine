@@ -51,4 +51,21 @@ const transactionsDara: TransactionItemProps[] = [
   },
 ];
 
-export { myCardsData, transactionsDara };
+const weeklyActivityData = [
+  { month: "Sat", Withdraw: 480, Deposit: 240 },
+  { month: "Sun", Withdraw: 350, Deposit: 120 },
+  { month: "Mon", Withdraw: 330, Deposit: 280 },
+  { month: "Tue", Withdraw: 490, Deposit: 380 },
+  { month: "Wed", Withdraw: 150, Deposit: 240 },
+  { month: "Thu", Withdraw: 390, Deposit: 240 },
+  { month: "Fri", Withdraw: 400, Deposit: 330 },
+];
+
+const expenseStatistics = [
+  { name: "Entertainment", value: 25, color: "indigo.9" },
+  { name: "Bill Espense", value: 15, color: "orange.6" },
+  { name: "Investment", value: 35, color: "blue.6" },
+  { name: "Others", value: 25, color: "dark.9" },
+];
+
+export { myCardsData, transactionsDara, weeklyActivityData, expenseStatistics };

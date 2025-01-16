@@ -1,7 +1,9 @@
 // components
+import ExpenseStatistics from "@components/pages/HomePageComponents/ExpenseStatistics";
 import HomePageStructure from "@components/pages/HomePageComponents/HomePageStructure";
 import HomePageMyCards from "@components/pages/HomePageComponents/MyCards";
 import RecentTransaction from "@components/pages/HomePageComponents/RecentTransaction";
+import WeeklyActivity from "@components/pages/HomePageComponents/WeeklyActivity";
 import { Stack, Text } from "@mantine/core";
 
 export const metadata = {
@@ -14,10 +16,10 @@ export default function Home() {
       <HomePageStructure
         myCards={<HomePageMyCards />}
         recentTransaction={<RecentTransaction />}
+        weeklyActivity={<WeeklyActivity />}
+        expenseStatistics={<ExpenseStatistics />}
         balanceHistory={<Text>Transaction</Text>}
-        expenseStatistics={<Text>Transaction</Text>}
         quickTransfer={<Text>Transaction</Text>}
-        weeklyActivity={<Text>Transaction</Text>}
       />
     </Stack>
   );
