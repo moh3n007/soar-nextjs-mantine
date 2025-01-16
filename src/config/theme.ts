@@ -1,9 +1,10 @@
 "use client";
 
-import { ActionIcon, createTheme, Input } from "@mantine/core";
+import { ActionIcon, createTheme, Input, Text } from "@mantine/core";
 import { DEFAULT_THEME } from "@mantine/core";
 import tailwindColors from "tailwindcss/colors";
 import type { DefaultColors } from "tailwindcss/types/generated/colors";
+import clsx from "clsx";
 
 function transformColors(input: DefaultColors) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -25,6 +26,7 @@ const customizedTailwindColors = {
   gray: {
     ...tailwindColors.gray,
     100: "#F5F7FA",
+    400: "#B1B1B1",
   },
 };
 
@@ -48,9 +50,19 @@ export const theme = createTheme({
     }),
     ActionIcon: ActionIcon.extend({
       classNames: (_, props) => ({
-        root: props.variant === "light" ? "bg-gray-100" : "",
+        root: clsx(
+          props.variant === "light" && "bg-gray-100",
+          props.size === "lg" && "w-[50px] h-[50px] [&_svg]:w-[25px] [&_svg]:h-[25px]"
+        ),
       }),
     }),
+    Text: Text.extend({
+      classNames: (_, props) => ({
+        root: clsx(
+          props.size === "md" && "text-[18px] leading-[22px] font-medium"
+        ),
+      }),
+    })
   },
   fontFamily: "inherit",
 });

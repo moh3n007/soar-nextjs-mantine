@@ -4,7 +4,7 @@ import { Flex, Text } from "@mantine/core";
 export default function Home() {
   return (
     <Flex>
-      <Text >Hellos</Text>
+      <Text>My Privileges Page</Text>
     </Flex>
   );
 }

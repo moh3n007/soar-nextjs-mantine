@@ -1,4 +1,6 @@
 "use client";
+
+// components
 import {
   ActionIcon,
   AppShell,
@@ -6,15 +8,23 @@ import {
   Burger,
   Group,
   Input,
-  Skeleton,
   Text,
 } from "@mantine/core";
+
+// hooks
 import { useDisclosure } from "@mantine/hooks";
-import TaskIcon from "@icons/TaskIcon";
-import { PropsWithChildren } from "react";
-import SettingIcon from "../svg/SettingIcon";
-import NotificationIcon from "../svg/NotificationIcon";
-import SearchIcon from "../svg/SearchIcon";
+
+// types
+import type { PropsWithChildren } from "react";
+
+// icons
+import IconMagnifyingGlass from "@icons/MagnifyingGlass";
+import IconSettings from "@icons/Settings";
+import IconNotification from "@icons/Notification";
+import IconMingcuteTaskFill from "@icons/MingcuteTaskFill";
+import Icon from "../../atoms/Icon";
+import SidebarLinkItem from "./partials/SidebarLinkItem";
+import sidebarLinks from "@/src/constants/sidebarLinks";
 
 const ProtectedLayout = ({ children }: PropsWithChildren) => {
   const [opened, { toggle }] = useDisclosure();
@@ -40,24 +50,26 @@ const ProtectedLayout = ({ children }: PropsWithChildren) => {
                 variant="filled"
                 placeholder="Search for something"
                 w={255}
-                leftSection={<SearchIcon className="text-blue-200" />}
+                leftSection={
+                  <Icon icon={IconMagnifyingGlass} size={20} color={"blue.2"} />
+                }
               />
               <ActionIcon
                 variant="light"
                 radius="xl"
-                size={50}
+                size="lg"
                 aria-label="Settings"
                 color="blue.2"
               >
-                <SettingIcon />
+                <Icon icon={IconSettings} />
               </ActionIcon>
               <ActionIcon
                 variant="light"
                 radius="xl"
-                size={50}
+                size="lg"
                 aria-label="Settings"
               >
-                <NotificationIcon />
+                <Icon icon={IconNotification} />
               </ActionIcon>
               <Avatar size={60} src={"/user_avatar.jpeg"} />
             </Group>
@@ -65,14 +77,15 @@ const ProtectedLayout = ({ children }: PropsWithChildren) => {
         </Group>
       </AppShell.Header>
       <AppShell.Navbar>
-        <Group gap={4} py={20} px={38} h={100}>
-          <TaskIcon />
-          <Text className="font-extrabold text-2xl" c={"blue.9"}>Soar Task</Text>
+        <Group gap={10} py={20} px={38} h={{ md: 75, sm: 75, lg: 100 }}>
+          <Icon icon={IconMingcuteTaskFill} size={35} />
+          <Text className="font-extrabold text-2xl" c={"blue.9"}>
+            Soar Task
+          </Text>
         </Group>
-        {Array(15)
-          .fill(0)
-          .map((_, index) => (
-            <Skeleton key={index} h={28} mt="sm" animate={false} />
+        {sidebarLinks
+          .map((item) => (
+            <SidebarLinkItem key={`sidebar_link_${item.title}`} onClick={toggle} {...item} />
           ))}
       </AppShell.Navbar>
       <AppShell.Main>{children}</AppShell.Main>
