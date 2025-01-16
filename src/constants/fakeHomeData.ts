@@ -68,4 +68,41 @@ const expenseStatistics = [
   { name: "Others", value: 25, color: "dark.9" },
 ];
 
-export { myCardsData, transactionsDara, weeklyActivityData, expenseStatistics };
+const balanceHistoryData = [
+  {
+    date: "Jul",
+    Balance: 160,
+  },
+  {
+    date: "Aug",
+    Balance: 230,
+  },
+  {
+    date: "Sep",
+    Balance: 430,
+  },
+  {
+    date: "Oct",
+    Balance: 790,
+  },
+  {
+    date: "Nov",
+    Balance: 210,
+  },
+  {
+    date: "Dec",
+    Balance: 580,
+  },
+  {
+    date: "Jan",
+    Balance: 230,
+  },
+];
+
+export {
+  myCardsData,
+  transactionsDara,
+  weeklyActivityData,
+  expenseStatistics,
+  balanceHistoryData,
+};

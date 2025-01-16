@@ -1,4 +1,5 @@
 // components
+import BalanceHistory from "@components/pages/HomePageComponents/BalanceHistory";
 import ExpenseStatistics from "@components/pages/HomePageComponents/ExpenseStatistics";
 import HomePageStructure from "@components/pages/HomePageComponents/HomePageStructure";
 import HomePageMyCards from "@components/pages/HomePageComponents/MyCards";
@@ -18,8 +19,8 @@ export default function Home() {
         recentTransaction={<RecentTransaction />}
         weeklyActivity={<WeeklyActivity />}
         expenseStatistics={<ExpenseStatistics />}
-        balanceHistory={<Text>Transaction</Text>}
         quickTransfer={<Text>Transaction</Text>}
+        balanceHistory={<BalanceHistory />}
       />
     </Stack>
   );

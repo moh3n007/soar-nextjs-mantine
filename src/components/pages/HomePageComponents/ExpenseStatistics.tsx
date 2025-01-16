@@ -22,7 +22,6 @@ const ExpenseStatistics = () => {
           withLabels
           data={expenseStatistics}
           size={270}
-          labelColor="dark.0"
           strokeWidth={6}
           classNames={{ root: "[&_text]:fill-white" }}
         />
