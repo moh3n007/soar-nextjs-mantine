@@ -4,6 +4,7 @@ export { default as EconomicInvestment } from "./EconomicInvestment";
 export { default as Home } from "./Home";
 export { default as Loan } from "./Loan";
 export { default as MagnifyingGlass } from "./MagnifyingGlass";
+export { default as MasterCard } from "./MasterCard";
 export { default as MingcuteTaskFill } from "./MingcuteTaskFill";
 export { default as Notification } from "./Notification";
 export { default as Service } from "./Service";

@@ -69,7 +69,9 @@ export const theme = createTheme({
     Text: Text.extend({
       classNames: (_, props) => ({
         root: clsx(
+          props.size === "sm" && "text-[12px] leading-[14px] font-normal",
           props.size === "md" && "text-[18px] leading-[22px] font-medium",
+          props.size === "lg" && "text-[22px] leading-[26px] font-semibold",
         ),
       }),
     }),

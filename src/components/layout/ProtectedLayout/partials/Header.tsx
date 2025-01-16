@@ -25,7 +25,7 @@ const Header: FC<HeaderProps> = (props) => {
             radius="xl"
             size="lg"
             variant="filled"
-            placeholder="search_for_something"
+            placeholder="Search for something"
             w={255}
             leftSection={
               <Icon icon={IconMagnifyingGlass} size={20} color={"blue.2"} />

@@ -15,48 +15,48 @@ import type { ISidebarLinkItemProps } from "@interfaces/sharedTypes/layoutProps"
 const sidebarLinks: ISidebarLinkItemProps[] = [
   {
     link: "/",
-    title: "dashboard",
-    text: "overview",
+    title: "Dashboard",
+    text: "Overview",
     icon: IconHome,
   },
   {
     link: "/transactions",
-    title: "transactions",
+    title: "Transactions",
     icon: IconTransfer,
   },
   {
     link: "/accounts",
-    title: "accounts",
+    title: "Accounts",
     icon: IconUser,
   },
   {
     link: "/investments",
-    title: "investments",
+    title: "Investments",
     icon: IconEconomicInvestment,
   },
   {
     link: "/credit-card",
-    title: "credit_card",
+    title: "Creadit Card",
     icon: IconCreditCard,
   },
   {
     link: "/loans",
-    title: "loans",
+    title: "Loans",
     icon: IconLoan,
   },
   {
     link: "/services",
-    title: "services",
+    title: "Services",
     icon: IconService,
   },
   {
     link: "/my-privileges",
-    title: "my_privileges",
+    title: "My Privileges",
     icon: IconEconometrics,
   },
   {
     link: "/settings",
-    title: "setting",
+    title: "Setting",
     icon: IconSettingsSolid,
   },
 ];

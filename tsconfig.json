@@ -25,6 +25,7 @@
       "@interfaces/*": ["./src/types/*"],
       "@config/*": ["./src/config/*"],
       "@constants/*": ["./src/constants/*"],
+      "@utils/*": ["./src/utils/*"],
       "@/*": ["./*"]
     }
   },

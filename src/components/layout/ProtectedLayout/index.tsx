@@ -32,7 +32,7 @@ const ProtectedLayout = ({ children }: PropsWithChildren) => {
       layout="alt"
       header={{ height: { base: 60, md: 100 } }}
       navbar={{ width: 250, breakpoint: "md", collapsed: { mobile: !opened } }}
-      padding="md"
+      classNames={{ navbar: "border-gray-200", header: "border-gray-200" }}
     >
       <AppShell.Header>
         <Header title={headerTitle} />
@@ -40,7 +40,7 @@ const ProtectedLayout = ({ children }: PropsWithChildren) => {
       <AppShell.Navbar>
         <Navbar toggleMenu={toggle} />
       </AppShell.Navbar>
-      <AppShell.Main>{children}</AppShell.Main>
+      <AppShell.Main className="bg-gray-100">{children}</AppShell.Main>
     </AppShell>
   );
 };
