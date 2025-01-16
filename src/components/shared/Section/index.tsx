@@ -20,7 +20,15 @@ const Section: FC<SectionProps> = (props) => {
         )}
         {action}
       </Flex>
-      <Flex className={clsx("", classNames?.content)}>{children}</Flex>
+      <Flex
+        p={withBg ? 25 : 0}
+        className={clsx(
+          withBg ? "bg-white rounded-3xl" : "",
+          classNames?.content,
+        )}
+      >
+        {children}
+      </Flex>
     </Stack>
   );
 };

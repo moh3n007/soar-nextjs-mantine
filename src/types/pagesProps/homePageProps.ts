@@ -1,5 +1,10 @@
 // types
-import type { BankCardProps } from "@interfaces/sharedTypes/bankCardProps";
+import { IconSVGProps } from "@interfaces/commonProps";
+import type {
+  BankCardProps,
+  TransactionProps,
+} from "@interfaces/sharedTypes/bankCardProps";
+import { MantineColor } from "@mantine/core";
 
 export interface HomePageStructureProps {
   myCards: React.ReactNode;
@@ -16,4 +21,9 @@ export interface BankCardComponentProps {
     root?: string;
   };
   selected?: boolean;
+}
+
+export interface TransactionItemProps extends TransactionProps {
+  icon: IconSVGProps;
+  color: MantineColor;
 }

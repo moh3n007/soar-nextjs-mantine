@@ -37,6 +37,10 @@ const customizedTailwindColors = {
     100: "#F5F7FA",
     400: "#B1B1B1",
   },
+  red: {
+    ...tailwindColors.red,
+    600: "#FF4B4A",
+  },
 };
 
 const colors = transformColors(customizedTailwindColors as DefaultColors);
@@ -69,7 +73,8 @@ export const theme = createTheme({
     Text: Text.extend({
       classNames: (_, props) => ({
         root: clsx(
-          props.size === "sm" && "text-[12px] leading-[14px] font-normal",
+          props.size === "xs" && "text-[12px] leading-[14px] font-normal",
+          props.size === "sm" && "text-[15px] leading-[18px] font-400",
           props.size === "md" && "text-[18px] leading-[22px] font-medium",
           props.size === "lg" && "text-[22px] leading-[26px] font-semibold",
         ),

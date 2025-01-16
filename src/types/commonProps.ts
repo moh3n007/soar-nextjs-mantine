@@ -1,6 +1,8 @@
 // types
 import type { DefaultMantineColor, StyleProp } from "@mantine/core";
 
+export type TransactionType = "deposit" | "withdraw";
+
 export type IconSVGProps = (
   props: React.SVGProps<SVGSVGElement>,
 ) => React.JSX.Element;

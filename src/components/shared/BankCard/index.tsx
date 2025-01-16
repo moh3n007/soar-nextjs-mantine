@@ -27,7 +27,7 @@ const BankCard: FC<BankCardComponentProps> = (props) => {
       <Stack p={25} c={selected ? "gray.0" : "blue.9"} gap={35}>
         <Flex>
           <Stack gap={0} flex={1}>
-            <Text size="sm" c={!selected ? "blue.2" : undefined}>
+            <Text size="xs" c={!selected ? "blue.2" : undefined}>
               Balance
             </Text>
             <Text
@@ -46,18 +46,28 @@ const BankCard: FC<BankCardComponentProps> = (props) => {
         </Flex>
         <Flex>
           <Stack flex={1} gap={2}>
-            <Text size="sm" c={!selected ? "blue.2" : undefined}>
+            <Text size="xs" c={!selected ? "blue.2" : undefined} lineClamp={1}>
               CARD HOLDER
             </Text>
-            <Text lh={"18px"} fw={600} className="text-[15px] text-inherit">
+            <Text
+              lh={"18px"}
+              fw={600}
+              className="text-[15px] text-inherit"
+              lineClamp={1}
+            >
               {item.cardHolder}
             </Text>
           </Stack>
           <Stack flex={1} gap={2}>
-            <Text size="sm" c={!selected ? "blue.2" : undefined}>
+            <Text size="xs" c={!selected ? "blue.2" : undefined} lineClamp={1}>
               VALID THRU
             </Text>
-            <Text lh={"18px"} fw={600} className="text-[15px] text-inherit">
+            <Text
+              lh={"18px"}
+              fw={600}
+              className="text-[15px] text-inherit"
+              lineClamp={1}
+            >
               {item.validDate}
             </Text>
           </Stack>
@@ -75,7 +85,7 @@ const BankCard: FC<BankCardComponentProps> = (props) => {
         align={"center"}
         justify={"space-between"}
       >
-        <Text size="lg" className="text-inherit">
+        <Text size="lg" className="text-inherit" lineClamp={1}>
           {maskCardNumber(item.cardNumber)}
         </Text>
         <Icon icon={IconMasterCard} size={44} />
