@@ -11,6 +11,28 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    rules: {
+      // Autofix: Add "type" to imports when missing
+      "@typescript-eslint/consistent-type-imports": [
+        "error",
+        { prefer: "type-imports", fixStyle: "inline-type-imports" },
+      ],
+
+      // Code formatting and prettifying
+      "prettier/prettier": "error",
+
+      // Additional autofix rules for consistency
+      quotes: ["error", "double", { avoidEscape: true }],
+      semi: ["error", "always"],
+      "comma-dangle": ["error", "always-multiline"],
+      "object-curly-spacing": ["error", "always"],
+      "array-bracket-spacing": ["error", "never"],
+      "arrow-parens": ["error", "always"],
+      "eol-last": ["error", "always"],
+    },
+    plugins: ["@typescript-eslint", "prettier"],
+  },
 ];
 
 export default eslintConfig;

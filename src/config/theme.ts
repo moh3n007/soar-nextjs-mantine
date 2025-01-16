@@ -1,9 +1,18 @@
 "use client";
 
+// components
 import { ActionIcon, createTheme, Input, Text } from "@mantine/core";
+
+// Mantine default theme
 import { DEFAULT_THEME } from "@mantine/core";
+
+// TailwindCSS default theme
 import tailwindColors from "tailwindcss/colors";
+
+// types
 import type { DefaultColors } from "tailwindcss/types/generated/colors";
+
+// helper funcs
 import clsx from "clsx";
 
 function transformColors(input: DefaultColors) {
@@ -52,17 +61,18 @@ export const theme = createTheme({
       classNames: (_, props) => ({
         root: clsx(
           props.variant === "light" && "bg-gray-100",
-          props.size === "lg" && "w-[50px] h-[50px] [&_svg]:w-[25px] [&_svg]:h-[25px]"
+          props.size === "lg" &&
+            "w-[50px] h-[50px] [&_svg]:w-[25px] [&_svg]:h-[25px]",
         ),
       }),
     }),
     Text: Text.extend({
       classNames: (_, props) => ({
         root: clsx(
-          props.size === "md" && "text-[18px] leading-[22px] font-medium"
+          props.size === "md" && "text-[18px] leading-[22px] font-medium",
         ),
       }),
-    })
+    }),
   },
   fontFamily: "inherit",
 });

@@ -1,16 +1,19 @@
+// css styles
 import "@mantine/core/styles.css";
-import "./globals.css"
-import React, { PropsWithChildren } from "react";
-import {
-  MantineProvider,
-  ColorSchemeScript,
-  mantineHtmlProps,
-} from "@mantine/core";
-import { theme } from "@/src/config/theme";
+import "./globals.css";
+
+// types
+import type { PropsWithChildren } from "react";
+
+// Mantine configs
+import { ColorSchemeScript, mantineHtmlProps } from "@mantine/core";
+
+// components
+import Providers from "@components/providers";
 
 export const metadata = {
-  title: "Mantine Next.js template",
-  description: "I am using Mantine with Next.js!",
+  title: "Soar Task",
+  description: "This is a task implemented by Mohsen Lotfi",
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {
@@ -18,14 +21,14 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang="en" {...mantineHtmlProps}>
       <head>
         <ColorSchemeScript />
-        <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.png" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

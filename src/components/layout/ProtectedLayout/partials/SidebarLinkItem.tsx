@@ -1,14 +1,12 @@
-import Icon from "@/src/components/atoms/Icon";
+import Icon from "@/src/components/shared/Icon";
+import { ISidebarLinkItemProps } from "@/src/types/sharedTypes/layoutProps";
 import { Box, Flex, Text, ThemeIcon } from "@mantine/core";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import * as React from "react";
-import { ISidebarLinkItemProps } from "./SidebarLinkItem.types";
-
-
 
 const SidebarLinkItem: React.FunctionComponent<ISidebarLinkItemProps> = (
-  props
+  props,
 ) => {
   const { title, link, icon, onClick } = props;
   const pathname = usePathname();
@@ -21,9 +19,16 @@ const SidebarLinkItem: React.FunctionComponent<ISidebarLinkItemProps> = (
         gap={26}
         align={"center"}
         className="w-full relative"
-        c={focused ? "gray.9" :"gray.4"}
+        c={focused ? "gray.9" : "gray.4"}
       >
-        {focused && <Box w={12} h={"100%"} bg={"gray.9"} className="absolute -left-[6px] top-0 rounded-tr-md rounded-br-md" />}
+        {focused && (
+          <Box
+            w={12}
+            h={"100%"}
+            bg={"gray.9"}
+            className="absolute -left-[6px] top-0 rounded-tr-md rounded-br-md"
+          />
+        )}
         <ThemeIcon variant="transparent" size={25} c={"inherit"}>
           <Icon icon={icon} size={25} />
         </ThemeIcon>

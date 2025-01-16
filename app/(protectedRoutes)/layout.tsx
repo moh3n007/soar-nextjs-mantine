@@ -1,8 +1,10 @@
-import ProtectedLayout from "@/src/components/molecules/ProtectedLayout";
-import * as React from "react";
+// components
+import ProtectedLayout from "@/src/components/layout/ProtectedLayout";
 
+// types
+import type { PropsWithChildren } from "react";
 
-const ProtectedRoutesLayout = ({children}: React.PropsWithChildren) => {
+const ProtectedRoutesLayout = ({ children }: PropsWithChildren) => {
   return <ProtectedLayout>{children}</ProtectedLayout>;
 };
 
