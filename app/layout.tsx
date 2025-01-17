@@ -2,6 +2,7 @@
 import "@mantine/core/styles.css";
 import "@mantine/charts/styles.css";
 import "@mantine/carousel/styles.css";
+import "@mantine/dates/styles.css";
 import "./globals.css";
 
 // types

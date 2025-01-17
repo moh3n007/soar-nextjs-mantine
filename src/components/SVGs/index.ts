@@ -2,6 +2,7 @@ export { default as BusinessCard } from "./BusinessCard";
 export { default as CreditCard } from "./CreditCard";
 export { default as Econometrics } from "./Econometrics";
 export { default as EconomicInvestment } from "./EconomicInvestment";
+export { default as Edit } from "./Edit";
 export { default as Finder } from "./Finder";
 export { default as Home } from "./Home";
 export { default as Loan } from "./Loan";

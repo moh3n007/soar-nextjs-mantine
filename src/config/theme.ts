@@ -1,7 +1,17 @@
 "use client";
 
 // components
-import { ActionIcon, createTheme, Input, Text } from "@mantine/core";
+import {
+  ActionIcon,
+  Autocomplete,
+  createTheme,
+  Input,
+  NumberInput,
+  PasswordInput,
+  Text,
+  TextInput,
+} from "@mantine/core";
+import { DatePickerInput } from "@mantine/dates";
 
 // Mantine default theme
 import { DEFAULT_THEME } from "@mantine/core";
@@ -36,11 +46,16 @@ const customizedTailwindColors = {
     ...tailwindColors.gray,
     100: "#F5F7FA",
     200: "#EDF1F7",
+    300: "#F4F5F7",
     400: "#B1B1B1",
   },
   red: {
     ...tailwindColors.red,
     600: "#FF4B4A",
+  },
+  slate: {
+    ...tailwindColors.slate,
+    200: "#DFEAF2",
   },
 };
 
@@ -83,6 +98,46 @@ export const theme = createTheme({
           props.size === "md" && "text-[18px] leading-[22px] font-medium",
           props.size === "lg" && "text-[22px] leading-[26px] font-semibold",
         ),
+      }),
+    }),
+    TextInput: TextInput.extend({
+      classNames: (_, props) => ({
+        label:
+          "text-base leading-5 mb-2.5 max-md:text-13 max-md:leading-[15px] max-md:mb-1.5",
+        input:
+          "rounded-xl h-[50px] text-base placeholder:text-gray-400 text-blue-200 border-slate-200 max-md:h-[40px] max-md:text-sm max-md:px-[15px]",
+      }),
+    }),
+    PasswordInput: PasswordInput.extend({
+      classNames: (_, props) => ({
+        label:
+          "text-base leading-5 mb-2.5 max-md:text-13 max-md:leading-[15px] max-md:mb-1.5",
+        input:
+          "rounded-xl h-[50px] text-base placeholder:text-gray-400 text-blue-200 border-slate-200 max-md:h-[40px] max-md:text-sm max-md:px-[15px]",
+      }),
+    }),
+    DatePickerInput: DatePickerInput.extend({
+      classNames: (_, props) => ({
+        label:
+          "text-base leading-5 mb-2.5 max-md:text-13 max-md:leading-[15px] max-md:mb-1.5",
+        input:
+          "rounded-xl h-[50px] text-base placeholder:text-gray-400 text-blue-200 border-slate-200 max-md:h-[40px] max-md:text-sm max-md:px-[15px]",
+      }),
+    }),
+    Autocomplete: Autocomplete.extend({
+      classNames: (_, props) => ({
+        label:
+          "text-base leading-5 mb-2.5 max-md:text-13 max-md:leading-[15px] max-md:mb-1.5",
+        input:
+          "rounded-xl h-[50px] text-base placeholder:text-gray-400 text-blue-200 border-slate-200 max-md:h-[40px] max-md:text-sm max-md:px-[15px]",
+      }),
+    }),
+    NumberInput: NumberInput.extend({
+      classNames: (_, props) => ({
+        label:
+          "text-base leading-5 mb-2.5 max-md:text-13 max-md:leading-[15px] max-md:mb-1.5",
+        input:
+          "rounded-xl h-[50px] text-base placeholder:text-gray-400 text-blue-200 border-slate-200 max-md:h-[40px] max-md:text-sm max-md:px-[15px]",
       }),
     }),
   },

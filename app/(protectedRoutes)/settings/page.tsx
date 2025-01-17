@@ -1,10 +1,13 @@
+// components
+import SettingMainBox from "@components/pages/SettingPageComponents/SettingMainBox";
 
-import { Flex, Text } from "@mantine/core";
+// types
+import type { Metadata } from "next";
 
-export default function Home() {
-  return (
-    <Flex>
-      <Text>Settings Page</Text>
-    </Flex>
-  );
+export const metadata: Metadata = {
+  title: "Soar Task | Settings",
+};
+
+export default function Settings() {
+  return <SettingMainBox />;
 }

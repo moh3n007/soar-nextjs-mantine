@@ -95,7 +95,7 @@ const QuickTransfer = () => {
               miw={"unset"}
               w={70}
               classNames={{
-                input: "text-base max-md:text-xs",
+                input: "text-base max-md:text-xs border-none",
               }}
               hideControls
               decimalScale={2}

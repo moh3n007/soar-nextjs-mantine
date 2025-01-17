@@ -23,9 +23,17 @@ module.exports = {
       colors: {
         blue: {
           200: "#718EBF",
+          600: "#396AFF",
+          900: "#343C6A",
         },
         gray: {
           100: "#F5F7FA",
+          200: "#EDF1F7",
+          300: "#F4F5F7",
+          400: "#B1B1B1",
+        },
+        slate: {
+          200: "#DFEAF2",
         },
       },
       screens: {
@@ -38,4 +46,9 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("data-active", "&[data-active]");
+    },
+  ],
 };

@@ -12,50 +12,53 @@ import IconSettingsSolid from "@icons/SettingsSolid";
 // types
 import type { SidebarLinkItemProps } from "@interfaces/sharedTypes";
 
+// constants
+import { ROUTES } from "./routes";
+
 const sidebarLinks: SidebarLinkItemProps[] = [
   {
-    link: "/",
+    link: ROUTES.DASHBOARD,
     title: "Dashboard",
     text: "Overview",
     icon: IconHome,
   },
   {
-    link: "/transactions",
+    link: ROUTES.TRANSACTIONS,
     title: "Transactions",
     icon: IconTransfer,
   },
   {
-    link: "/accounts",
+    link: ROUTES.ACCOUNTS,
     title: "Accounts",
     icon: IconUser,
   },
   {
-    link: "/investments",
+    link: ROUTES.INVESTMENTS,
     title: "Investments",
     icon: IconEconomicInvestment,
   },
   {
-    link: "/credit-card",
+    link: ROUTES.CREDIT_CARD,
     title: "Creadit Card",
     icon: IconCreditCard,
   },
   {
-    link: "/loans",
+    link: ROUTES.LOANS,
     title: "Loans",
     icon: IconLoan,
   },
   {
-    link: "/services",
+    link: ROUTES.SERVICES,
     title: "Services",
     icon: IconService,
   },
   {
-    link: "/my-privileges",
+    link: ROUTES.MY_PRIVILEGES,
     title: "My Privileges",
     icon: IconEconometrics,
   },
   {
-    link: "/settings",
+    link: ROUTES.SETTINGS,
     title: "Setting",
     icon: IconSettingsSolid,
   },

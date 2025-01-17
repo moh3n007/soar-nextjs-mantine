@@ -49,4 +49,5 @@ export interface SectionProps extends PropsWithChildren {
     content?: string;
   };
   action?: React.ReactNode;
+  hideTitleBox?: boolean;
 }

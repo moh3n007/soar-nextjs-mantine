@@ -6,9 +6,12 @@ import HomePageMyCards from "@components/pages/HomePageComponents/MyCards";
 import QuickTransfer from "@components/pages/HomePageComponents/QuickTransfer";
 import RecentTransaction from "@components/pages/HomePageComponents/RecentTransaction";
 import WeeklyActivity from "@components/pages/HomePageComponents/WeeklyActivity";
-import { Stack, Text } from "@mantine/core";
+import { Stack } from "@mantine/core";
 
-export const metadata = {
+// types
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Soar Task | Home",
 };
 
