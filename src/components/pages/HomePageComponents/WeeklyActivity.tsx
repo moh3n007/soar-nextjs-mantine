@@ -1,3 +1,5 @@
+"use client";
+
 // components
 import { BarChart } from "@mantine/charts";
 import Section from "@shared/Section";
@@ -5,7 +7,18 @@ import Section from "@shared/Section";
 // constants
 import { weeklyActivityData } from "@constants/fakeHomeData";
 
+// hooks
+import { useMatches } from "@mantine/core";
+
 const WeeklyActivity = () => {
+  const barSize = useMatches({
+    base: 7,
+    md: 15,
+  });
+  const barGap = useMatches({
+    base: 5,
+    md: 12,
+  });
   return (
     <Section
       title="Weekly Activity"
@@ -22,8 +35,8 @@ const WeeklyActivity = () => {
         dataKey="month"
         withLegend
         tooltipAnimationDuration={200}
-        barChartProps={{ barGap: 12 }}
-        barProps={{ radius: 100, barSize: 15 }}
+        barChartProps={{ barGap }}
+        barProps={{ radius: 100, barSize }}
         xAxisProps={{ padding: { left: 0, right: 0 } }}
         yAxisProps={{
           padding: { top: 0, bottom: 0 },
