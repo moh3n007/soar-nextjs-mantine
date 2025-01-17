@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <Stack px={40} py={24}>
+    <Stack px={{ base: 0, md: 40 }} py={{ base: 0, md: 24 }}>
       <HomePageStructure
         myCards={<HomePageMyCards />}
         recentTransaction={<RecentTransaction />}

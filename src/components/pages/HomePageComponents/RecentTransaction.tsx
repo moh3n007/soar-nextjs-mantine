@@ -11,9 +11,17 @@ const RecentTransaction = () => {
     <Section
       title="Recent Transaction"
       withBg
-      classNames={{ root: "h-full", content: "flex-1" }}
+      classNames={{
+        root: "h-full pb-[22px] md:mb-0",
+        content: "flex-1 max-md:!py-5",
+      }}
     >
-      <Stack gap={5} flex={1} justify="space-between">
+      <Stack
+        flex={1}
+        justify="space-between"
+        px={{ base: 18, md: 0 }}
+        className="gap-2.5 max-md:!gap-3 max-md:!justify-normal"
+      >
         {transactionsDara.map((item, i) => (
           <TransactionItem key={`transaction_${item.title}_${i}`} {...item} />
         ))}

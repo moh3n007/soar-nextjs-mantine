@@ -11,6 +11,7 @@ export interface IconProps {
   icon: IconSVGProps;
   color?: StyleProp<DefaultMantineColor>;
   size?: number;
+  className?: string;
 }
 
 export interface UserData {

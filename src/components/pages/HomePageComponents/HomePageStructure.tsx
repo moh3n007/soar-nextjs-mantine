@@ -17,13 +17,13 @@ const HomePageStructure: FC<HomePageStructureProps> = (props) => {
     weeklyActivity,
   } = props;
   return (
-    <Grid gutter={{ sm: 22, md: 30 }}>
-      <Grid.Col span={{ sm: 12, md: 8 }}>{myCards}</Grid.Col>
-      <Grid.Col span={{ sm: 12, md: 4 }}>{recentTransaction}</Grid.Col>
-      <Grid.Col span={{ sm: 12, md: 8 }}>{weeklyActivity}</Grid.Col>
-      <Grid.Col span={{ sm: 12, md: 4 }}>{expenseStatistics}</Grid.Col>
-      <Grid.Col span={{ sm: 12, md: 5 }}>{quickTransfer}</Grid.Col>
-      <Grid.Col span={{ sm: 12, md: 7 }}>{balanceHistory}</Grid.Col>
+    <Grid gutter={{ base: 0, md: 30 }}>
+      <Grid.Col span={{ base: 12, md: 8 }}>{myCards}</Grid.Col>
+      <Grid.Col span={{ base: 12, md: 4 }}>{recentTransaction}</Grid.Col>
+      <Grid.Col span={{ base: 12, md: 8 }}>{weeklyActivity}</Grid.Col>
+      <Grid.Col span={{ base: 12, md: 4 }}>{expenseStatistics}</Grid.Col>
+      <Grid.Col span={{ base: 12, md: 5 }}>{quickTransfer}</Grid.Col>
+      <Grid.Col span={{ base: 12, md: 7 }}>{balanceHistory}</Grid.Col>
     </Grid>
   );
 };

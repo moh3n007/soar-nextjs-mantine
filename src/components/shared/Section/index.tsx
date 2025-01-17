@@ -12,9 +12,14 @@ const Section: FC<SectionProps> = (props) => {
   const { title, withBg, classNames, children, action } = props;
   return (
     <Stack className={clsx(classNames?.root)} gap={20}>
-      <Flex align={"center"}>
+      <Flex align={"center"} px={{ base: 25, md: 0 }}>
         {title && (
-          <Text size="lg" className={clsx(classNames?.title)}>
+          <Text
+            className={clsx(
+              "text-base leading-5 font-semibold min-md:text-22 min-md:leading-lg",
+              classNames?.title,
+            )}
+          >
             {title}
           </Text>
         )}

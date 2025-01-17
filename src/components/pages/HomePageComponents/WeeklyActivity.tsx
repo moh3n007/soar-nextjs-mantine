@@ -7,10 +7,16 @@ import { weeklyActivityData } from "@constants/fakeHomeData";
 
 const WeeklyActivity = () => {
   return (
-    <Section title="Weekly Activity" withBg>
+    <Section
+      title="Weekly Activity"
+      withBg
+      classNames={{
+        content: "max-md:!pt-2.5 max-md:!pb-10",
+      }}
+    >
       <BarChart
         strokeDasharray="1 0"
-        h={300}
+        h={{ base: 250, md: 300 }}
         w={"100%"}
         data={weeklyActivityData}
         dataKey="month"

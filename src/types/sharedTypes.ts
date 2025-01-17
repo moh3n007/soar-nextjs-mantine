@@ -32,7 +32,7 @@ export interface SidebarLinkItemProps {
   text?: string;
 }
 
-export interface HeaderProps {
+export interface HeaderProps extends NavbarProps {
   title?: string;
 }
 

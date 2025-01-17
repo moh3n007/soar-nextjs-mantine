@@ -1,5 +1,13 @@
 // components
-import { ActionIcon, Avatar, Burger, Group, Input, Text } from "@mantine/core";
+import {
+  ActionIcon,
+  Avatar,
+  Burger,
+  Group,
+  Input,
+  Stack,
+  Text,
+} from "@mantine/core";
 import Icon from "@shared/Icon";
 
 // icons
@@ -12,10 +20,28 @@ import type { FC } from "react";
 import type { HeaderProps } from "@interfaces/sharedTypes";
 
 const Header: FC<HeaderProps> = (props) => {
-  const { title } = props;
+  const { title, toggleMenu } = props;
   return (
     <Group h="100%">
-      <Burger size="sm" hiddenFrom="md" />
+      <Stack
+        hiddenFrom="md"
+        p={24}
+        h={"100%"}
+        flex={1}
+        gap={0}
+        justify="space-between"
+      >
+        <Burger size="sm" onClick={toggleMenu} />
+        <Input
+          radius="xl"
+          size="md"
+          variant="filled"
+          placeholder="Search for something"
+          leftSection={
+            <Icon icon={IconMagnifyingGlass} size={16} color={"blue.2"} />
+          }
+        />
+      </Stack>
       <Group h="100%" py={20} px={38} visibleFrom="md" flex={1}>
         <Text className="font-semibold text-28 leading-[34px]" c={"blue.9"}>
           {title}

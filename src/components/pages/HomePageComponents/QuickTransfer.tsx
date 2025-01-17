@@ -15,8 +15,10 @@ import Section from "@shared/Section";
 
 // hooks
 import { useForm } from "@mantine/form";
+import useBreakpoint from "@hooks/useBreakpoint";
 
 const QuickTransfer = () => {
+  const { isSmallerThanMd } = useBreakpoint();
   const { setFieldValue, values, onSubmit, isValid, getInputProps } = useForm({
     initialValues: {
       user: usersData[0],
@@ -34,7 +36,10 @@ const QuickTransfer = () => {
     <Section
       title="Quick Transfer"
       withBg
-      classNames={{ root: "h-full", content: "flex-1" }}
+      classNames={{
+        root: "h-full",
+        content: "flex-1 max-md:!pt-3 max-md:!pb-11",
+      }}
     >
       <Stack
         gap={30}
@@ -42,9 +47,10 @@ const QuickTransfer = () => {
         w={"100%"}
         component={"form"}
         onSubmit={onSubmit(onTransfer) as any}
+        className="max-md:!gap-lg"
       >
         <Carousel
-          height={140}
+          height={isSmallerThanMd ? 100 : 140}
           slideSize="33.333333%"
           slideGap="md"
           loop
@@ -62,12 +68,14 @@ const QuickTransfer = () => {
             </Carousel.Slide>
           ))}
         </Carousel>
-        <Flex gap={24} align={"center"}>
+        <Flex gap={24} align={"center"} justify={"space-between"}>
           <Text
             component="label"
             htmlFor="transferInput"
             c={"blue.2"}
             lh={"20px"}
+            lineClamp={1}
+            className="max-md:text-xs max-md:leading-3.5"
           >
             Write Amount
           </Text>
@@ -77,7 +85,8 @@ const QuickTransfer = () => {
             bg={"gray.2"}
             className="rounded-full"
             justify={"space-between"}
-            pl={26}
+            pl={isSmallerThanMd ? 16 : 26}
+            maw={265}
           >
             <NumberInput
               variant="unstyled"
@@ -86,7 +95,7 @@ const QuickTransfer = () => {
               miw={"unset"}
               w={70}
               classNames={{
-                input: "text-[16px]",
+                input: "text-base max-md:text-xs",
               }}
               hideControls
               decimalScale={2}
@@ -95,13 +104,16 @@ const QuickTransfer = () => {
               {...getInputProps("amount")}
             />
             <Button
-              rightSection={<Icon icon={IconSend} />}
+              rightSection={
+                <Icon icon={IconSend} size={isSmallerThanMd ? 16 : 24} />
+              }
               radius={"xl"}
               variant="filled"
               color="dark"
-              size="lg"
+              size={isSmallerThanMd ? "md" : "lg"}
               type="submit"
               disabled={!isValid("amount")}
+              className="max-md:text-13"
             >
               Send
             </Button>

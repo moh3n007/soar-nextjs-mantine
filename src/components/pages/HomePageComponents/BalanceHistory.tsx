@@ -1,6 +1,6 @@
 "use client";
 // hooks
-import { useMantineTheme } from "@mantine/core";
+import { useMantineTheme, useMatches } from "@mantine/core";
 
 // components
 import Section from "@shared/Section";
@@ -19,9 +19,19 @@ import { balanceHistoryData } from "@constants/fakeHomeData";
 
 const BalanceHistory = () => {
   const theme = useMantineTheme();
+  const size = useMatches({
+    base: 230,
+    md: 300,
+  });
   return (
-    <Section title="Balance History" withBg>
-      <ResponsiveContainer width="100%" height={300}>
+    <Section
+      title="Balance History"
+      withBg
+      classNames={{
+        content: "max-md:!pt-1.5 max-md:!pb-9 max-md:!px-5",
+      }}
+    >
+      <ResponsiveContainer width="100%" height={size}>
         <AreaChart
           width={500}
           height={400}

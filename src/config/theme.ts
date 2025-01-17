@@ -55,10 +55,14 @@ export const theme = createTheme({
   components: {
     Input: Input.extend({
       classNames: (_, props) => ({
-        input:
+        input: clsx(
           props.size === "lg"
             ? "text-[14px] leading-[19px] pl-[58px] pr-5"
             : "",
+          props.size === "md"
+            ? "text-[13px] leading-[16px] pl-[40px] pr-5"
+            : "",
+        ),
         section: props.size === "lg" ? "pl-5" : "",
       }),
     }),
@@ -75,7 +79,7 @@ export const theme = createTheme({
       classNames: (_, props) => ({
         root: clsx(
           props.size === "xs" && "text-[12px] leading-[14px] font-normal",
-          props.size === "sm" && "text-[15px] leading-[18px] font-400",
+          props.size === "sm" && "text-[15px] leading-[18px] font-normal",
           props.size === "md" && "text-[18px] leading-[22px] font-medium",
           props.size === "lg" && "text-[22px] leading-[26px] font-semibold",
         ),
