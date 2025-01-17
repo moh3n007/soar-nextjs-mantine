@@ -9,7 +9,7 @@ import IconNotification from "@icons/Notification";
 
 // types
 import type { FC } from "react";
-import type { HeaderProps } from "@interfaces/sharedTypes/layoutProps";
+import type { HeaderProps } from "@interfaces/sharedTypes";
 
 const Header: FC<HeaderProps> = (props) => {
   const { title } = props;

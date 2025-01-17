@@ -35,6 +35,7 @@ const customizedTailwindColors = {
   gray: {
     ...tailwindColors.gray,
     100: "#F5F7FA",
+    200: "#EDF1F7",
     400: "#B1B1B1",
   },
   red: {

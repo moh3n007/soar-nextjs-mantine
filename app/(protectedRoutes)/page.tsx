@@ -3,6 +3,7 @@ import BalanceHistory from "@components/pages/HomePageComponents/BalanceHistory"
 import ExpenseStatistics from "@components/pages/HomePageComponents/ExpenseStatistics";
 import HomePageStructure from "@components/pages/HomePageComponents/HomePageStructure";
 import HomePageMyCards from "@components/pages/HomePageComponents/MyCards";
+import QuickTransfer from "@components/pages/HomePageComponents/QuickTransfer";
 import RecentTransaction from "@components/pages/HomePageComponents/RecentTransaction";
 import WeeklyActivity from "@components/pages/HomePageComponents/WeeklyActivity";
 import { Stack, Text } from "@mantine/core";
@@ -19,7 +20,7 @@ export default function Home() {
         recentTransaction={<RecentTransaction />}
         weeklyActivity={<WeeklyActivity />}
         expenseStatistics={<ExpenseStatistics />}
-        quickTransfer={<Text>Transaction</Text>}
+        quickTransfer={<QuickTransfer />}
         balanceHistory={<BalanceHistory />}
       />
     </Stack>

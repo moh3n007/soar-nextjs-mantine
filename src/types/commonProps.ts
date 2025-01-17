@@ -12,3 +12,9 @@ export interface IconProps {
   color?: StyleProp<DefaultMantineColor>;
   size?: number;
 }
+
+export interface UserData {
+  avatarUrl: string;
+  fullName: string;
+  role: string;
+}

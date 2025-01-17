@@ -10,7 +10,7 @@ import SidebarLinkItem from "./SidebarLinkItem";
 import IconMingcuteTaskFill from "@icons/MingcuteTaskFill";
 
 // types
-import type { NavbarProps } from "@interfaces/sharedTypes/layoutProps";
+import type { NavbarProps } from "@interfaces/sharedTypes";
 import type { FC } from "react";
 
 const Navbar: FC<NavbarProps> = ({ toggleMenu }) => {

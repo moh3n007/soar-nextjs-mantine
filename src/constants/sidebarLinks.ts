@@ -10,9 +10,9 @@ import IconEconometrics from "@icons/Econometrics";
 import IconSettingsSolid from "@icons/SettingsSolid";
 
 // types
-import type { ISidebarLinkItemProps } from "@interfaces/sharedTypes/layoutProps";
+import type { SidebarLinkItemProps } from "@interfaces/sharedTypes";
 
-const sidebarLinks: ISidebarLinkItemProps[] = [
+const sidebarLinks: SidebarLinkItemProps[] = [
   {
     link: "/",
     title: "Dashboard",

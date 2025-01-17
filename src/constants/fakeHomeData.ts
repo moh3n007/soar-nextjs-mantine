@@ -1,5 +1,5 @@
 // types
-import type { BankCardProps } from "@interfaces/sharedTypes/bankCardProps";
+import type { BankCardProps } from "@interfaces/sharedTypes";
 import type { TransactionItemProps } from "@interfaces/pagesProps/homePageProps";
 
 // icons
@@ -62,8 +62,8 @@ const weeklyActivityData = [
 ];
 
 const expenseStatistics = [
-  { name: "Entertainment", value: 25, color: "indigo.9" },
   { name: "Bill Espense", value: 15, color: "orange.6" },
+  { name: "Entertainment", value: 25, color: "indigo.9" },
   { name: "Investment", value: 35, color: "blue.6" },
   { name: "Others", value: 25, color: "dark.9" },
 ];

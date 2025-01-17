@@ -5,7 +5,7 @@ import { Flex, Stack, Text } from "@mantine/core";
 import clsx from "clsx";
 
 // types
-import type { SectionProps } from "@interfaces/sharedTypes/sectionProps";
+import type { SectionProps } from "@interfaces/sharedTypes";
 import type { FC } from "react";
 
 const Section: FC<SectionProps> = (props) => {
