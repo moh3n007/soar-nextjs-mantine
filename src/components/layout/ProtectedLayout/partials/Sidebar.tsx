@@ -18,7 +18,7 @@ import type { FC } from "react";
 const Navbar: FC<NavbarProps> = ({ toggleMenu }) => {
   return (
     <>
-      <Link href={ROUTES.DASHBOARD}>
+      <Link href={ROUTES.DASHBOARD} onClick={toggleMenu}>
         <Group gap={10} py={20} px={38} h={{ md: 75, sm: 75, lg: 100 }}>
           <Icon icon={IconMingcuteTaskFill} size={35} />
           <Text className="font-extrabold text-2xl" c={"blue.9"}>

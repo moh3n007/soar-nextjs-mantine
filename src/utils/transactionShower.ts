@@ -1,4 +1,5 @@
-import { TransactionType } from "@interfaces/commonProps";
+// types
+import type { TransactionType } from "@interfaces/commonProps";
 
 export default function transactionShower(
   amount: number,

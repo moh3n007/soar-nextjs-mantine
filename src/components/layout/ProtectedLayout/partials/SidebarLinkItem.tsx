@@ -1,13 +1,16 @@
+// components
 import Icon from "@/src/components/shared/Icon";
-import { SidebarLinkItemProps } from "@/src/types/sharedTypes";
 import { Box, Flex, Text, ThemeIcon } from "@mantine/core";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import * as React from "react";
 
-const SidebarLinkItem: React.FunctionComponent<SidebarLinkItemProps> = (
-  props,
-) => {
+// hooks
+import { usePathname } from "next/navigation";
+
+// types
+import type { SidebarLinkItemProps } from "@/src/types/sharedTypes";
+import type { FC } from "react";
+
+const SidebarLinkItem: FC<SidebarLinkItemProps> = (props) => {
   const { title, link, icon, onClick } = props;
   const pathname = usePathname();
   const focused = pathname === link;
