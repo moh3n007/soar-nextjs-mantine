@@ -37,7 +37,7 @@ export interface HeaderProps extends NavbarProps {
 }
 
 export interface NavbarProps {
-  toggleMenu: VoidFunction;
+  toggleMenu?: VoidFunction;
 }
 
 export interface SectionProps extends PropsWithChildren {

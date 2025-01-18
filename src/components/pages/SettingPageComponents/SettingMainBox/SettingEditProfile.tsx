@@ -92,7 +92,7 @@ const SettingEditProfile = () => {
               htmlFor="user_avatar"
               className="cursor-pointer"
             >
-              <Avatar size={avatarSize} radius={100} src="/user_avatar.jpeg" />
+              <Avatar size={avatarSize} radius={100} src="/user_1.jpeg" />
               <Input
                 className="invisible absolute top-0 left-0"
                 id="user_avatar"

@@ -1,8 +1,8 @@
 // components
-import { ActionIcon, Avatar, Group, Text } from "@mantine/core";
+import { ActionIcon, Group, Text } from "@mantine/core";
 import Icon from "@shared/Icon";
-import Link from "next/link";
 import HeaderSearch from "./shared/HeaderSearch";
+import UserAvatar from "./shared/UserAvatar";
 
 // icons
 import IconSettings from "@icons/Settings";
@@ -10,9 +10,6 @@ import IconNotification from "@icons/Notification";
 
 // types
 import type { HeaderProps } from "@interfaces/sharedTypes";
-
-// constants
-import { ROUTES } from "@constants/routes";
 
 const DesktopHeader = (props: Partial<HeaderProps>) => {
   const { title } = props;
@@ -35,9 +32,7 @@ const DesktopHeader = (props: Partial<HeaderProps>) => {
         <ActionIcon variant="light" radius="xl" size="lg" aria-label="Settings">
           <Icon icon={IconNotification} />
         </ActionIcon>
-        <Link href={ROUTES.SETTINGS}>
-          <Avatar size={60} src={"/user_avatar.jpeg"} />
-        </Link>
+        <UserAvatar size={60} />
       </Group>
     </>
   );
