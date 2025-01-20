@@ -37,7 +37,6 @@ const HomePageMyCards = () => {
             <BankCard
               item={card}
               key={`my_card_${card.cardNumber}`}
-              classNames={{ root: "w-full" }}
               selected={index === 0}
             />
           ))}

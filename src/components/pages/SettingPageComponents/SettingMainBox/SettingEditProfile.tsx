@@ -17,7 +17,6 @@ import {
   SimpleGrid,
   Stack,
   TextInput,
-  useMatches,
 } from "@mantine/core";
 import Icon from "@shared/Icon";
 import { DatePickerInput } from "@mantine/dates";
@@ -32,18 +31,6 @@ import { useForm } from "@mantine/form";
 import type { ProfileFormData } from "@interfaces/pagesProps/settingPageProps";
 
 const SettingEditProfile = () => {
-  const direction = useMatches({
-    base: "column",
-    md: "row",
-  }) as "column" | "row";
-  const avatarSize = useMatches({
-    base: 100,
-    md: 90,
-  });
-  const buttonSize = useMatches({
-    base: "md",
-    md: "lg",
-  });
   const { getInputProps, onSubmit } = useForm<ProfileFormData>({
     initialValues: {
       name: "Charlene Reed",
@@ -73,8 +60,7 @@ const SettingEditProfile = () => {
     >
       <Flex
         gap={{ base: 22, md: 65 }}
-        direction={direction}
-        className="max-md:items-center"
+        className="flex-row max-md:items-center max-md:flex-col"
       >
         <Box h={"fit-content"}>
           <Indicator
@@ -92,9 +78,14 @@ const SettingEditProfile = () => {
               htmlFor="user_avatar"
               className="cursor-pointer"
             >
-              <Avatar size={avatarSize} radius={100} src="/user_1.jpeg" />
+              <Avatar
+                size={90}
+                radius={100}
+                src="/user_1.jpeg"
+                className="max-md:w-[100px] max-md:h-[100px]"
+              />
               <Input
-                className="invisible absolute top-0 left-0"
+                className="invisible !absolute top-0 left-0"
                 id="user_avatar"
                 type="file"
                 accept="image/*"
@@ -169,13 +160,13 @@ const SettingEditProfile = () => {
         </SimpleGrid>
       </Flex>
       <Button
-        size={buttonSize}
+        size="lg"
         ml="auto"
         radius={"lg"}
         miw={190}
         bg={"gray.9"}
         type="submit"
-        className="max-md:!rounded-xl max-md:!w-full"
+        className="max-md:rounded-xl max-md:w-full max-md:h-[40px] max-md:text-base"
       >
         Save
       </Button>
